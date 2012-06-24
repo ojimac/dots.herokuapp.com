@@ -1,0 +1,29 @@
+<h1><a href="/">dots...</a></h1>
+
+<div class="panel">
+  <h5>What is dotfiles?</h5>
+  <p>dotfilesとは、ドットで始まるファイル(.emacs, .vimrc, .zshrc等...)をgitなどのバージョン管理ソフトで管理する際に、慣例的に用いられる<br />ディレクトリ名のことです。</p>
+  <p> 参考) <%= link_to 'dotfiles.github.com', 'http://dotfiles.github.com' %></p>
+  <p>dotsでは、githubで管理されているdotfilesたちを集めています。</p>
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th>オーナー</th>
+      <th>URL</th>
+      <th>フォーク数</th>
+      <th>ウォッチ数</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @repos.each do |repo| %>
+    <tr>
+      <td><%= link_to repo.owner, "https://github.com/#{repo.owner}" %></td>
+      <td><%= link_to repo.url, repo.url %></td>
+      <td><%= repo.forks %></td>
+      <td><%= repo.watchers %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>

@@ -1,0 +1,37 @@
+<h1>Listing repos</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Url</th>
+    <th>Forks</th>
+    <th>Owner</th>
+    <th>Homepage</th>
+    <th>Watchers</th>
+    <th>Description</th>
+    <th>Owner</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @repos.each do |repo| %>
+  <tr>
+    <td><%= repo.name %></td>
+    <td><%= repo.url %></td>
+    <td><%= repo.forks %></td>
+    <td><%= repo.owner %></td>
+    <td><%= repo.homepage %></td>
+    <td><%= repo.watchers %></td>
+    <td><%= repo.description %></td>
+    <td><%= repo.owner %></td>
+    <td><%= link_to 'Show', repo %></td>
+    <td><%= link_to 'Edit', edit_repo_path(repo) %></td>
+    <td><%= link_to 'Destroy', repo, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Repo', new_repo_path %>

@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @repo.name %>
+</p>
+
+<p>
+  <b>Url:</b>
+  <%= @repo.url %>
+</p>
+
+<p>
+  <b>Forks:</b>
+  <%= @repo.forks %>
+</p>
+
+<p>
+  <b>Owner:</b>
+  <%= @repo.owner %>
+</p>
+
+<p>
+  <b>Homepage:</b>
+  <%= @repo.homepage %>
+</p>
+
+<p>
+  <b>Watchers:</b>
+  <%= @repo.watchers %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @repo.description %>
+</p>
+
+<p>
+  <b>Owner:</b>
+  <%= @repo.owner %>
+</p>
+
+
+<%= link_to 'Edit', edit_repo_path(@repo) %> |
+<%= link_to 'Back', repos_path %>
