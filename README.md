@@ -1,3 +1,3 @@
-# dots...
+# dots... (http://dots.herokuapp.com)
 
-- dots is webapp which aggrigate dotfiles.
+## dots is webapp which aggrigate dotfiles.
